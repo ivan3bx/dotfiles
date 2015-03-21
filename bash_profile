@@ -24,6 +24,12 @@ alias gu='git pull'
 alias gl='git log'
 
 #
+# Go
+#
+export GOPATH=/usr/local/Cellar/go/1.4.2/libexec/
+export PATH=$PATH:${GOPATH//://bin:}/bin
+
+#
 # ls
 #
 alias ls='ls -Fc'
@@ -157,3 +163,4 @@ bash_prompt
 unset bash_prompt
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/usr/local/sbin:$PATH"
