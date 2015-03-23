@@ -1,4 +1,4 @@
-source `pwd`/.profile
+if [ -e $HOME/.profile ]; then source `pwd`/.profile; fi
 
 #
 # Git command completions
@@ -9,7 +9,10 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 #
 # Racket
 #
-export PATH=$PATH:/Applications/Racket\ v6.1.1/bin
+if [ -e '/Applications/Racket\ v6.1.1/bin' ]
+then
+  export PATH=$PATH:/Applications/Racket\ v6.1.1/bin
+fi
 
 #
 # RVM
