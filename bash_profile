@@ -15,11 +15,6 @@ then
 fi
 
 #
-# RVM
-#
-#export CC=gcc-4.2
-
-#
 # Git
 #
 alias gs='git status'
@@ -164,6 +159,15 @@ bash_prompt() {
 PROMPT_COMMAND=bash_prompt_command
 bash_prompt
 unset bash_prompt
+
+#
+# na - https://github.com/ttscoff/na/
+#
+if [ -s "$HOME/.dotfiles/na.sh" ]; then
+	export NA_MAX_DEPTH=2
+	export NA_AUTO_LIST_FOR_DIR=1 # 0 to disable
+	source "$HOME/.dotfiles/na.sh"
+fi
 
 export PATH="/usr/local/sbin:$PATH"
 
