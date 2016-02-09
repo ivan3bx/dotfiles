@@ -1,4 +1,4 @@
-if [ -e $HOME/.profile ]; then source `pwd`/.profile; fi
+if [ -e $HOME/.profile ]; then source $HOME/.profile; fi
 
 #
 # Git command completions
@@ -24,7 +24,7 @@ alias gl='git log'
 #
 # Go
 #
-export GOPATH=/usr/local/Cellar/go/1.4.2/libexec/
+export GOPATH=$HOME/projects/go
 export PATH=$PATH:${GOPATH//://bin:}/bin
 
 #
@@ -51,7 +51,7 @@ alias bundle_proxy="http_proxy=http://localhost:3132 bundle"
 #
 # Shell Defaults
 #
-export EDITOR="/usr/local/bin/mate -w"
+export EDITOR=`which vi`
 export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=cxgxcxdxbxegedabagacad
