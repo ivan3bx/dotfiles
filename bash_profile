@@ -60,8 +60,8 @@ export ARCHFLAGS='-arch x86_64'
 #
 # JDK defaults
 #
-export M2_HOME=/usr/local/Cellar/maven30/3.0.5/libexec
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
+export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
 
 #
 # Scala / SBT
@@ -172,3 +172,5 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
+[[ -s "/usr/local/bin/dnvm.sh" ]] && source "/usr/local/bin/dnvm.sh"
