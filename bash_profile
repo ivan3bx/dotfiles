@@ -22,12 +22,6 @@ alias gu='git pull'
 alias gl='git log'
 
 #
-# Go
-#
-export GOPATH=$HOME/projects/go
-export PATH=$PATH:${GOPATH//://bin:}/bin
-
-#
 # ls
 #
 alias ls='ls -Fc'
@@ -73,6 +67,12 @@ export SCALA_HOME=/usr/local/Cellar/scala/2.9.1/libexec
 # Python defaults
 #
 alias ipython='ipython --colors=Linux'
+
+#
+# Go
+#
+export GOPATH=$HOME/projects/go
+export PATH=$PATH:$GOPATH/bin
 
 #
 # Open man page in Preview, or TextMate

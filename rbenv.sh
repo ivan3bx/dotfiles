@@ -1,5 +1,5 @@
 export PATH="$HOME/.rbenv/shims:${PATH}"
-source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.bash"
+source "/usr/local/opt/rbenv/completions/rbenv.bash"
 rbenv rehash 2>/dev/null
 rbenv() {
   typeset command
