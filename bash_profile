@@ -22,6 +22,16 @@ alias gu='git pull'
 alias gl='git log'
 
 #
+# Rails
+#
+alias r='rails'
+
+#
+# Node
+#
+alias npm-exec='PATH=$(npm bin):$PATH'
+
+#
 # ls
 #
 alias ls='ls -Fc'
@@ -55,7 +65,7 @@ export ARCHFLAGS='-arch x86_64'
 # JDK defaults
 #
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/Home
 
 #
 # Scala / SBT
