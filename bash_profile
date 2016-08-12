@@ -6,6 +6,14 @@ if [ -e $HOME/.profile ]; then source $HOME/.profile; fi
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+
+#
+# Go shortcuts
+#
+
+if [ -e $HOME/.dotfiles/go.sh ]; then source $HOME/.dotfiles/go.sh; fi
+
+
 #
 # Racket
 #
@@ -153,7 +161,7 @@ bash_prompt() {
   # background colors
   local BGK='\[\033[40m\]'  # black
   local BGR='\[\033[41m\]'  # red
-  local BGG='\[\033[42m\]'  # green
+  local BGR='\[\033[42m\]'  # green
   local BGBR='\[\033[43m\]' # brown
   local BGB='\[\033[44m\]'  # blue
   local BGM='\[\033[45m\]'  # purple
