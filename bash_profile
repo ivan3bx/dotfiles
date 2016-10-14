@@ -1,5 +1,7 @@
 if [ -e $HOME/.profile ]; then source $HOME/.profile; fi
 
+ulimit -n 8192
+
 #
 # Git command completions
 #
@@ -68,6 +70,8 @@ export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=cxgxcxdxbxegedabagacad
 export ARCHFLAGS='-arch x86_64'
+export HISTFILESIZE=900
+export HISTSIZE=900
 
 #
 # JDK defaults
