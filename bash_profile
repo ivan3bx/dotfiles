@@ -15,13 +15,18 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ -e $HOME/.dotfiles/go.sh ]; then source $HOME/.dotfiles/go.sh; fi
 
+if [ -e '/usr/local/bin/grc' ]
+then
+  alias go='grc go'
+fi
+
 
 #
-# Racket
+# VSCode
 #
-if [ -e '/Applications/Racket\ v6.1.1/bin' ]
+if [ -e '/Applications/Visual Studio Code.app' ]
 then
-  export PATH=$PATH:/Applications/Racket\ v6.1.1/bin
+  alias code='open -a /Applications/Visual\ Studio\ Code.app '
 fi
 
 #
