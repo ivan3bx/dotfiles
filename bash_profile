@@ -15,12 +15,6 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ -e $HOME/.dotfiles/go.sh ]; then source $HOME/.dotfiles/go.sh; fi
 
-if [ -e '/usr/local/bin/grc' ]
-then
-  alias go='grc go'
-fi
-
-
 #
 # VSCode
 #
