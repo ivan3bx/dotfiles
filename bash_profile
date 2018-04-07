@@ -190,8 +190,5 @@ if [ -s "$HOME/.dotfiles/na.sh" ]; then
 	source "$HOME/.dotfiles/na.sh"
 fi
 
-export PATH="/usr/local/sbin:$PATH"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
-[[ -s "/usr/local/bin/dnvm.sh" ]] && source "/usr/local/bin/dnvm.sh"
