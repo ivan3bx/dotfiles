@@ -1,4 +1,7 @@
-if [ -e $HOME/.profile ]; then source $HOME/.profile; fi
+#!/bin/bash
+
+# shellcheck source=/dev/null
+if [ -e "$HOME/.profile" ]; then source "$HOME/.profile"; fi
 
 ulimit -n 8192
 
@@ -13,7 +16,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 # Go shortcuts
 #
 
-if [ -e $HOME/.dotfiles/go.sh ]; then source $HOME/.dotfiles/go.sh; fi
+if [ -e "$HOME/.dotfiles/go.sh" ]; then source "$HOME/.dotfiles/go.sh"; fi
 
 
 #
@@ -27,14 +30,13 @@ fi
 #
 # Git
 #
-alias gs='git status'
-alias gu='git pull'
-alias gl='git log'
+alias git=hub
 
 #
 # Rails
 #
 alias r='rails'
+alias ri='ri -f ansi -T'
 
 #
 # Node
@@ -65,7 +67,7 @@ alias bundle_proxy="http_proxy=http://localhost:3132 bundle"
 #
 # Shell Defaults
 #
-export EDITOR=`which vi`
+export EDITOR=$(which vi)
 export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=cxgxcxdxbxegedabagacad
@@ -104,7 +106,7 @@ pman () {
 }
 
 tman () {
-  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+  MANWIDTH=160 MANPAGER='col -bx' man "$@" | mate
 }
 
 
@@ -120,7 +122,6 @@ bash_prompt_command() {
   # How many characters of the $PWD should be kept
   local pwdmaxlen=10
   # Indicate that there has been dir truncation
-  local trunc_symbol=""
   local dir=${PWD##*/}
   pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
   NEW_PWD=${PWD/$HOME/~}
@@ -133,7 +134,6 @@ bash_prompt_command() {
 }
 
 parse_git_branch() {
-  local DIRTY STATUS
   STATUS=$(git branch 2>/dev/null)
   [ $? -eq 128 -o $? -eq 127 ] && return
   # [[ "$STATUS" == *'working directory clean'* ]] || DIRTY=''
@@ -193,6 +193,6 @@ fi
 
 export PATH="/usr/local/sbin:$PATH"
 
+[[ -s "/usr/local/bin/dnvm.sh" ]] && source "/usr/local/bin/dnvm.sh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
-[[ -s "/usr/local/bin/dnvm.sh" ]] && source "/usr/local/bin/dnvm.sh"
