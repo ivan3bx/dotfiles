@@ -106,7 +106,12 @@ tman () {
   MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
 }
 
-
+#
+# https://twitter.com/francesc/status/982025296898478080
+#
+whatport() {
+  lsof -i ":$1" | grep LISTEN
+}
 
 ##################################################
 # The home directory (HOME) is replaced with a ~
