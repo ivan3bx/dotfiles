@@ -1,0 +1,30 @@
+# Include this in $HOME/.gitconfig
+#
+# [include]
+#        path = .dotfiles/gitconfig
+#
+
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	l = log
+	br = branch
+
+	# Credit: https://twitter.com/rakyll/status/979824709398228992
+	s = status --short --branch --ignore-submodules=untracked
+	find = log --pretty=\"format:%Cgreen%H\n%s\n%b\" --name-status --grep
+	amend = commit --amend --no-edit
+	undo = reset HEAD~
+	prune = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	delete = branch -D
+	pr = "!git fetch origin pull/$1/head:pr$1"
+	sync = "!git pull -q -r origin master"
+[color]
+    ui = true
+[core]
+	quotepath = false
+	pager = less -x1,5
+[http]
+[push]
+	default = simple

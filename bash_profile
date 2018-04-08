@@ -18,13 +18,12 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ -e "$HOME/.dotfiles/go.sh" ]; then source "$HOME/.dotfiles/go.sh"; fi
 
-
 #
-# Racket
+# VSCode
 #
-if [ -e '/Applications/Racket\ v6.1.1/bin' ]
+if [ -e '/Applications/Visual Studio Code.app' ]
 then
-  export PATH=$PATH:/Applications/Racket\ v6.1.1/bin
+  alias code='open -a /Applications/Visual\ Studio\ Code.app '
 fi
 
 #
@@ -109,7 +108,12 @@ tman () {
   MANWIDTH=160 MANPAGER='col -bx' man "$@" | mate
 }
 
-
+#
+# https://twitter.com/francesc/status/982025296898478080
+#
+whatport() {
+  lsof -i ":$1" | grep LISTEN
+}
 
 ##################################################
 # The home directory (HOME) is replaced with a ~
@@ -191,8 +195,5 @@ if [ -s "$HOME/.dotfiles/na.sh" ]; then
 	source "$HOME/.dotfiles/na.sh"
 fi
 
-export PATH="/usr/local/sbin:$PATH"
-
-[[ -s "/usr/local/bin/dnvm.sh" ]] && source "/usr/local/bin/dnvm.sh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
