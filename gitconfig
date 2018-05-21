@@ -10,6 +10,8 @@
 	co = checkout
 	l = log
 	br = branch
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	publish = "!git push -u origin $(git branch-name)"
 
 	# Credit: https://twitter.com/rakyll/status/979824709398228992
 	s = status --short --branch --ignore-submodules=untracked
@@ -27,4 +29,4 @@
 	pager = less -x1,5
 [http]
 [push]
-	default = simple
+	default = upstream
