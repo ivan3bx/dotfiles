@@ -38,6 +38,15 @@ alias r='rails'
 alias ri='ri -f ansi -T'
 
 #
+# rg
+#
+export RIPGREP_CONFIG_PATH=$HOME/.dotfiles/rgconfig
+
+bs() {
+	rg "$@" $(bundle show --paths)
+}
+
+#
 # Node
 #
 alias npm-exec='PATH=$(npm bin):$PATH'
@@ -79,12 +88,6 @@ export HISTSIZE=900
 #
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
 export JAVA_HOME=/Library/Java/Home
-
-#
-# Scala / SBT
-#
-export SBT_OPTS=-XX:MaxPermSize=256M
-export SCALA_HOME=/usr/local/Cellar/scala/2.9.1/libexec
 
 #
 # Python defaults

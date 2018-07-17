@@ -18,7 +18,7 @@
 	find = log --pretty=\"format:%Cgreen%H\n%s\n%b\" --name-status --grep
 	amend = commit --amend --no-edit
 	undo = reset HEAD~
-	prune = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	lprune = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	delete = branch -D
 	pr = "!git fetch origin pull/$1/head:pr$1"
 	sync = "!git pull -q -r origin master"
