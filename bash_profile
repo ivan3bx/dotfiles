@@ -8,8 +8,10 @@ ulimit -n 8192
 #
 # Git command completions
 #
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
+  source /usr/local/etc/bash_completion.d/git-completion.bash
+fi
 
 
 #
