@@ -45,7 +45,7 @@ alias ri='ri -f ansi -T'
 export RIPGREP_CONFIG_PATH=$HOME/.dotfiles/rgconfig
 
 bs() {
-	rg "$@" $(bundle show --paths)
+	rg "$@" -g "*.rb" $(bundle show --paths)
 }
 
 #
