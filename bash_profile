@@ -20,6 +20,13 @@ fi
 
 if [ -e "$HOME/.dotfiles/go.sh" ]; then source "$HOME/.dotfiles/go.sh"; fi
 
+cover () {
+    local t=$(mktemp -t cover)
+    go test $COVERFLAGS -coverprofile=$t $@ \
+        && go tool cover -func=$t \
+        && unlink $t
+}
+
 #
 # VSCode
 #
