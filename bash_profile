@@ -65,7 +65,7 @@ export RIPGREP_CONFIG_PATH=$HOME/.dotfiles/rgconfig
 #
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias fzf='fzf -m'
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git'
 
 bs() {
 	rg "$@" -g "*.rb" $(bundle show --paths)
