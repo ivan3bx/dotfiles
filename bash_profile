@@ -101,7 +101,6 @@ alias bundle_proxy="http_proxy=http://localhost:3132 bundle"
 # Shell Defaults
 #
 export EDITOR=$(which vi)
-export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=cxgxcxdxbxegedabagacad
 export ARCHFLAGS='-arch x86_64'
@@ -223,9 +222,6 @@ if [ -s "$HOME/.dotfiles/na.sh" ]; then
 	source "$HOME/.dotfiles/na.sh"
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -240,3 +236,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rbenv.sh" ]] && source "$HOME/.rbenv.sh"
