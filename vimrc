@@ -50,10 +50,16 @@ set undodir=~/.vim/undodir
 let g:go_fmt_command = "goimports"
 
 " Ruby
+:autocmd Filetype ruby set tabstop=2
 :autocmd Filetype ruby set softtabstop=2
-:autocmd Filetype ruby set sw=2
-:autocmd Filetype ruby set ts=2
+:autocmd Filetype ruby set shiftwidth=2
+:autocmd Filetype ruby set expandtab
 
 " NERDTree plugin specific commands
 :nnoremap <C-g> :NERDTreeToggle<CR>
 
+" Set specific linters
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
