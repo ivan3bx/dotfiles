@@ -63,3 +63,31 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \}
+
+" fzf config
+if executable('fzf')
+  " <C-p> or <C-t> to search files
+  nnoremap <silent> <C-t> :FZF -m<cr>
+  nnoremap <silent> <C-p> :FZF -m<cr>
+  nnoremap <silent> <M-t> :History<cr>
+
+  " Use fuzzy completion relative filepaths across directory
+  imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
+
+  " Better command history with q:
+  command! CmdHist call fzf#vim#command_history({'right': '40'})
+  nnoremap q: :CmdHist<CR>
+
+  " Better search history
+  command! QHist call fzf#vim#search_history({'right': '40'})
+  nnoremap q/ :QHist<CR>
+
+  command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '40%', 'options': '--no-color'})
+end
+
+" vim-test
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
