@@ -69,8 +69,7 @@ let g:ale_enabled = 0
 if executable('fzf')
   " <C-p> or <C-t> to search files
   nnoremap <silent> <C-t> :FZF -m<cr>
-  nnoremap <silent> <C-p> :FZF -m<cr>
-  nnoremap <silent> <M-t> :History<cr>
+  nnoremap <silent> <C-p> :History -m<cr>
 
   " Use fuzzy completion relative filepaths across directory
   imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')

@@ -13,6 +13,10 @@ if [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
   source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
+#
+# Makefile completion
+#
+if [ -e "$HOME/.dotfiles/make.sh" ]; then source "$HOME/.dotfiles/make.sh"; fi
 
 #
 # Go shortcuts
