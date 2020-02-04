@@ -7,6 +7,9 @@ set ts=4
 
 syntax on
 
+" leader
+let mapleader = ","
+
 " gui / term setup
 if !has('gui_running')
 	set t_Co=256
@@ -23,6 +26,9 @@ colorscheme iceberg
 set laststatus=2
 set noshowmode
 let g:lightline = { 'colorscheme': 'wombat' }
+
+" ctags
+set tags=.git/tags,tags
 
 " fzf
 set rtp+=/usr/local/opt/fzf
@@ -70,6 +76,10 @@ if executable('fzf')
   " <C-p> or <C-t> to search files
   nnoremap <silent> <C-t> :FZF -m<cr>
   nnoremap <silent> <C-p> :History -m<cr>
+
+  " search current word under cursor
+  nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+  nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 
   " Use fuzzy completion relative filepaths across directory
   imap <expr> <c-x><c-f> fzf#vim#complete#path('git ls-files $(git rev-parse --show-toplevel)')
