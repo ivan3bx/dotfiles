@@ -62,7 +62,7 @@ let g:go_fmt_command = "goimports"
 :autocmd Filetype ruby set expandtab
 
 " NERDTree plugin specific commands
-:nnoremap <C-g> :NERDTreeToggle<CR>
+" :nnoremap <C-g> :NERDTreeToggle<CR>
 
 " Set specific linters
 let g:ale_linters = {

@@ -52,3 +52,6 @@
 [submodule "vim/pack/plugins/start/vim-bundler"]
 	path = vim/pack/plugins/start/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "vim/pack/plugins/start/vim-processing"]
+	path = vim/pack/plugins/start/vim-processing
+	url = git@github.com:sophacles/vim-processing.git
