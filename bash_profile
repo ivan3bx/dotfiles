@@ -69,7 +69,7 @@ export RIPGREP_CONFIG_PATH=$HOME/.dotfiles/rgconfig
 #
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias fzf='fzf -m'
-export FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git'
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g !.git -g !*.class'
 
 bs() {
 	rg "$@" -g "*.rb" $(bundle show --paths)
@@ -115,7 +115,7 @@ export HISTSIZE=900
 # JDK defaults
 #
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=/usr/local/opt/openjdk
 
 #
 # Python defaults

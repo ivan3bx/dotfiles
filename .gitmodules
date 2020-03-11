@@ -55,3 +55,6 @@
 [submodule "vim/pack/plugins/start/vim-processing"]
 	path = vim/pack/plugins/start/vim-processing
 	url = git@github.com:sophacles/vim-processing.git
+[submodule "vim/pack/plugins/start/vim-fugitive"]
+	path = vim/pack/plugins/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git

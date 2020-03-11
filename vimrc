@@ -47,7 +47,8 @@ let g:go_fmt_command = "goimports"
 " :nnoremap <C-g> :NERDTreeToggle<CR> 
 
 " language linters
-let g:ale_enabled = 1
+let g:ale_enabled = 0
+let g:ale_sign_column_always = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 
 " fzf config
@@ -76,8 +77,6 @@ if executable('fzf')
   " search term history
   command! QHist call fzf#vim#search_history({'right': '40'})
   nnoremap q/ :QHist<CR>
-
-  command! -bang -nargs=* Ack call fzf#vim#ag(<q-args>, {'down': '40%', 'options': '--no-color'})
 end
 
 " vim-test

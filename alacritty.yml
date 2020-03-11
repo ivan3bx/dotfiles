@@ -1,0 +1,420 @@
+#env:
+  #TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 120
+    lines: 40
+  padding:
+    x: 0
+    y: 0
+  # Windows | Maximized | Fullscreen | SimpleFullscreen
+  startup_mode: Windowed
+  title: Work
+
+scrolling:
+  # Specifying '0' will disable scrolling.
+  history: 1000
+  # Scroll to the bottom when new text is written to the terminal.
+  auto_scroll: true
+
+font:
+  normal:
+    family: Source Code Pro for Powerline
+    style: Medium
+  size: 13.0
+  offset:
+    x: 0
+    y: 1
+
+schemes:
+  ayudark: &dark
+    # Default colors
+    primary:
+      background: '0x0A0E14'
+      foreground: '0xB3B1AD'
+
+    # Normal colors
+    normal:
+      black: '0x01060E'
+      red: '0xEA6C73'
+      green: '0x91B362'
+      yellow: '0xF9AF4F'
+      blue: '0x53BDFA'
+      magenta: '0xFAE994'
+      cyan: '0x90E1C6'
+      white: '0xC7C7C7'
+
+    # Bright colors
+    bright:
+      black: '0x686868'
+      red: '0xF07178'
+      green: '0xC2D94C'
+      yellow: '0xFFB454'
+      blue: '0x59C2FF'
+      magenta: '0xFFEE99'
+      cyan: '0x95E6CB'
+      white: '0xFFFFFF'
+
+  argonaut: 
+    # Default colors
+    primary:
+      background: '0x292C3E'
+      foreground: '0xEBEBEB'
+
+    # Cursor colors
+    cursor:
+     text: '0xFF261E'
+     cursor: '0xFF261E'
+
+    # Normal colors
+    normal:
+      black:   '0x0d0d0d'
+      red:     '0xFF301B'
+      green:   '0xA0E521'
+      yellow:  '0xFFC620'
+      blue:    '0x1BA6FA'
+      magenta: '0x8763B8'
+      cyan:    '0x21DEEF'
+      white:   '0xEBEBEB'
+
+    # Bright colors
+    bright:
+      black:   '0x6D7070'
+      red:     '0xFF4352'
+      green:   '0xB8E466'
+      yellow:  '0xFFD750'
+      blue:    '0x1BA6FA'
+      magenta: '0xA578EA'
+      cyan:    '0x73FBF1'
+      white:   '0xFEFEF8'
+
+  iceberg: &iceberg
+    # Default colors
+    primary:
+      background: '0x161821'
+      foreground: '0xd2d4de'
+
+    # Normal colors
+    normal:
+      black:   '0x161821'
+      red:     '0xe27878'
+      green:   '0xb4be82'
+      yellow:  '0xe2a478'
+      blue:    '0x84a0c6'
+      magenta: '0xa093c7'
+      cyan:    '0x89b8c2'
+      white:   '0xc6c8d1'
+
+    # Bright colors
+    bright:
+      black:   '0x6b7089'
+      red:     '0xe98989'
+      green:   '0xc0ca8e'
+      yellow:  '0xe9b189'
+      blue:    '0x91acd1'
+      magenta: '0xada0d3'
+      cyan:    '0x95c4ce'
+      white:   '0xd2d4de'
+
+  irblack:
+    # Default colors
+    primary:
+      background: '0x000000'
+      foreground: '0xffffff'
+
+    cursor:
+      text: '0xffffff'
+      cursor: '0xffffff'
+
+    # Normal colors
+    normal:
+      black:   '0x4e4e4e'
+      red:     '0xff6c60'
+      green:   '0xa8ff60'
+      yellow:  '0xffffb6'
+      blue:    '0x96cbfe'
+      magenta: '0xff73fd'
+      cyan:    '0xc6c5fe'
+      white:   '0xeeeeee'
+
+    # Bright colors
+    bright:
+      black:   '0x7c7c7c'
+      red:     '0xffb6b0'
+      green:   '0xceffab'
+      yellow:  '0xffffcb'
+      blue:    '0xb5dcfe'
+      magenta: '0xff9cfe'
+      cyan:    '0xdfdffe'
+      white:   '0xffffff'
+
+  monokai:
+    primary:
+      background: '0x2D2A2E'
+      foreground: '0xFCFCFA'
+
+    # Normal colors
+    normal:
+      black:   '0x403E41'
+      red:     '0xFF6188'
+      green:   '0xA9DC76'
+      yellow:  '0xFFD866'
+      blue:    '0xFC9867'
+      magenta: '0xAB9DF2'
+      cyan:    '0x78DCE8'
+      white:   '0xFCFCFA'
+
+    # Bright colors
+    bright:
+      black:   '0x727072'
+      red:     '0xFF6188'
+      green:   '0xA9DC76'
+      yellow:  '0xFFD866'
+      blue:    '0xFC9867'
+      magenta: '0xAB9DF2'
+      cyan:    '0x78DCE8'
+      white:   '0xFCFCFA'
+
+  oceanic-next:
+    primary:
+      background: '0x1b2b34'
+      foreground: '0xd8dee9'
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0x1b2b34'
+      cursor: '0xffffff'
+
+    # Normal colors
+    normal:
+      black:   '0x343d46'
+      red:     '0xEC5f67'
+      green:   '0x99C794'
+      yellow:  '0xFAC863'
+      blue:    '0x6699cc'
+      magenta: '0xc594c5'
+      cyan:    '0x5fb3b3'
+      white:   '0xd8dee9'
+
+    # Bright colors
+    bright:
+      black:   '0x343d46'
+      red:     '0xEC5f67'
+      green:   '0x99C794'
+      yellow:  '0xFAC863'
+      blue:    '0x6699cc'
+      magenta: '0xc594c5'
+      cyan:    '0x5fb3b3'
+      white:   '0xd8dee9'
+
+  tomorrow-night-bright: &defaultscheme
+    # Default colors
+    primary:
+      background: '0x000000'
+      foreground: '0xeaeaea'
+      dim_foreground: '0x9a9a9a'
+      bright_foreground: '0xffffff'
+
+    # Cursor colors
+    cursor:
+     text: '0x000000'
+     cursor: '0xffffff'
+
+    # Selection colors
+    selection:
+     text: '0xeaeaea'
+     background: '0x404040'
+
+    # Normal colors
+    normal:
+     black:   '0x000000'
+     red:     '0xd54e53'
+     green:   '0xb9ca4a'
+     yellow:  '0xe6c547'
+     blue:    '0x7aa6da'
+     magenta: '0xc397d8'
+     cyan:    '0x70c0ba'
+     white:   '0xeaeaea'
+
+    # Bright colors
+    bright:
+     black:   '0x666666'
+     red:     '0xff3334'
+     green:   '0x9ec400'
+     yellow:  '0xe7c547'
+     blue:    '0x7aa6da'
+     magenta: '0xb77ee0'
+     cyan:    '0x54ced6'
+     white:   '0xffffff'
+
+    # Dim colors
+    dim:
+     black:   '0x000000'
+     red:     '0x8c3336'
+     green:   '0x7a8530'
+     yellow:  '0x97822e'
+     blue:    '0x506d8f'
+     magenta: '0x80638e'
+     cyan:    '0x497e7a'
+     white:   '0x9a9a9a'
+
+# defaultscheme, dark or iceberg..
+colors: *dark
+
+background_opacity: 1.0
+
+mouse:
+  hide_when_typing: true
+  url:
+    launcher:
+      program: open
+      args: []
+    modifiers: Command
+
+# Mouse bindings
+#
+# Mouse bindings are specified as a list of objects, much like the key
+# bindings further below.
+#
+# Each mouse binding will specify a:
+#
+# - `mouse`:
+#
+#   - Middle
+#   - Left
+#   - Right
+#   - Numeric identifier such as `5`
+#
+# - `action` (see key bindings)
+#
+# And optionally:
+#
+# - `mods` (see key bindings)
+#mouse_bindings:
+#  - { mouse: Middle, action: PasteSelection }
+
+# Key bindings
+#
+# Key bindings are specified as a list of objects. For example, this is the
+# default paste binding:
+#
+# `- { key: V, mods: Control|Shift, action: Paste }`
+#
+# Each key binding will specify a:
+#
+# - `key`: Identifier of the key pressed
+#
+#    - A-Z
+#    - F1-F24
+#    - Key0-Key9
+#
+#    A full list with available key codes can be found here:
+#    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants
+#
+#    Instead of using the name of the keys, the `key` field also supports using
+#    the scancode of the desired key. Scancodes have to be specified as a
+#    decimal number. This command will allow you to display the hex scancodes
+#    for certain keys:
+#
+#       `showkey --scancodes`.
+#
+# Then exactly one of:
+#
+# - `chars`: Send a byte sequence to the running application
+#
+#    The `chars` field writes the specified string to the terminal. This makes
+#    it possible to pass escape sequences. To find escape codes for bindings
+#    like `PageUp` (`"\x1b[5~"`), you can run the command `showkey -a` outside
+#    of tmux. Note that applications use terminfo to map escape sequences back
+#    to keys. It is therefore required to update the terminfo when changing an
+#    escape sequence.
+#
+# - `action`: Execute a predefined action
+#
+#   - Copy
+#   - Paste
+#   - PasteSelection
+#   - IncreaseFontSize
+#   - DecreaseFontSize
+#   - ResetFontSize
+#   - ScrollPageUp
+#   - ScrollPageDown
+#   - ScrollLineUp
+#   - ScrollLineDown
+#   - ScrollToTop
+#   - ScrollToBottom
+#   - ClearHistory
+#   - Hide
+#   - Minimize
+#   - Quit
+#   - ToggleFullscreen
+#   - SpawnNewInstance
+#   - ClearLogNotice
+#   - ReceiveChar
+#   - None
+#
+#   (macOS only):
+#   - ToggleSimpleFullscreen: Enters fullscreen without occupying another space
+#
+# - `command`: Fork and execute a specified command plus arguments
+#
+#    The `command` field must be a map containing a `program` string and an
+#    `args` array of command line parameter strings. For example:
+#       `{ program: "alacritty", args: ["-e", "vttest"] }`
+#
+# And optionally:
+#
+# - `mods`: Key modifiers to filter binding actions
+#
+#    - Command
+#    - Control
+#    - Option
+#    - Super
+#    - Shift
+#    - Alt
+#
+#    Multiple `mods` can be combined using `|` like this:
+#       `mods: Control|Shift`.
+#    Whitespace and capitalization are relevant and must match the example.
+#
+# - `mode`: Indicate a binding for only specific terminal reported modes
+#
+#    This is mainly used to send applications the correct escape sequences
+#    when in different modes.
+#
+#    - AppCursor
+#    - AppKeypad
+#    - Alt
+#
+#    A `~` operator can be used before a mode to apply the binding whenever
+#    the mode is *not* active, e.g. `~Alt`.
+#
+# Bindings are always filled by default, but will be replaced when a new
+# binding with the same triggers is defined. To unset a default binding, it can
+# be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
+# a no-op if you do not wish to receive input characters for that binding.
+key_bindings:
+  - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
+  #- { key: Key0,   mods: Command,         action: ResetFontSize    }
+  #- { key: Equals, mods: Command,         action: IncreaseFontSize }
+  #- { key: Add,    mods: Command,         action: IncreaseFontSize }
+  #- { key: Minus,  mods: Command,         action: DecreaseFontSize }
+  #- { key: K,      mods: Command,         action: ClearHistory     }
+  #- { key: K,      mods: Command,         chars: "\x0c"            }
+  #- { key: V,      mods: Command,         action: Paste            }
+  #- { key: C,      mods: Command,         action: Copy             }
+  #- { key: H,      mods: Command,         action: Hide             }
+  #- { key: M,      mods: Command,         action: Minimize         }
+  #- { key: Q,      mods: Command,         action: Quit             }
+  #- { key: W,      mods: Command,         action: Quit             }
+  #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
+
+  #- { key: Paste,                    action: Paste                            }
+  #- { key: Copy,                     action: Copy                             }
+  #- { key: L,         mods: Control, action: ClearLogNotice                   }
+  #- { key: L,         mods: Control, chars: "\x0c"                            }
+  #- { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
