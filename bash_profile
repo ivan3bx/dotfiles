@@ -234,7 +234,7 @@ if [ $? -eq 0 ]; then
 else
     if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-    else
+	elif [ -f "/usr/local/anaconda3" ]; then
         export PATH="/usr/local/anaconda3/bin:$PATH"
     fi
 fi
