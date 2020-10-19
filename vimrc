@@ -7,6 +7,7 @@ set sw=4               " default shift width
 set ts=4               " default tab stop
 set encoding=utf-8     " default text encoding
 set fileencoding=utf-8 " default file encoding
+set clipboard=unnamed
 
 syntax on
 
