@@ -14,6 +14,7 @@ syntax on
 " gui / term setup
 if !has('gui_running')
 	set t_Co=256         " force 256-color mode
+	set bg=dark
 	colorscheme iceberg  " default colorscheme
 	let g:alduin_Shout_Dragon_Aspect     = 1 " for alduin
 	let g:alduin_Shout_Animal_Allegiance = 1 " for alduin
