@@ -6,7 +6,7 @@
 
 [alias]
 	ci = commit
-	st = status
+	ss = ci-status
 	co = checkout
 	l = log
 	br = branch
