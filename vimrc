@@ -1,6 +1,10 @@
 set nocompatible
 filetype off
 
+let g:UltiSnipsExpandTrigger=",,"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+
 filetype plugin indent on
 let mapleader = ","    " leader to ','
 set sw=4               " default shift width
@@ -40,13 +44,18 @@ set undodir=~/.vim/undodir
 let g:go_fmt_command = "goimports"
 
 " Ruby-specific configuration
-:autocmd Filetype ruby set tabstop=2
-:autocmd Filetype ruby set softtabstop=2
-:autocmd Filetype ruby set shiftwidth=2
-:autocmd Filetype ruby set expandtab
+:autocmd Filetype ruby setlocal tabstop=2
+:autocmd Filetype ruby setlocal softtabstop=2
+:autocmd Filetype ruby setlocal shiftwidth=2
+:autocmd Filetype ruby setlocal expandtab
+:autocmd Filetype ruby setlocal commentstring=#\ %s
+
+" Commentary
+noremap \ :Commentary<CR>
 
 " NERDTree
-" :nnoremap <C-g> :NERDTreeToggle<CR> 
+:noremap - :NERDTreeToggle<CR>
+:map <leader>r :NERDTreeFind<cr>
 
 " language linters
 let g:ale_enabled = 0
