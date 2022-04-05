@@ -31,9 +31,6 @@
 [submodule "vim/pack/plugins/start/vim-rake"]
 	path = vim/pack/plugins/start/vim-rake
 	url = git@github.com:tpope/vim-rake.git
-[submodule "vim/pack/plugins/start/vim-projectionist"]
-	path = vim/pack/plugins/start/vim-projectionist
-	url = git://github.com/tpope/vim-projectionist.git
 [submodule "vim/pack/plugins/start/vim-rails"]
 	path = vim/pack/plugins/start/vim-rails
 	url = git@github.com:tpope/vim-rails.git
@@ -49,9 +46,6 @@
 [submodule "vim/pack/plugins/start/vim-surround"]
 	path = vim/pack/plugins/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "vim/pack/plugins/start/vim-bundler"]
-	path = vim/pack/plugins/start/vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
 [submodule "vim/pack/plugins/start/vim-processing"]
 	path = vim/pack/plugins/start/vim-processing
 	url = git@github.com:sophacles/vim-processing.git
