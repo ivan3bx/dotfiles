@@ -55,9 +55,6 @@
 [submodule "vim/pack/plugins/start/vim-ledger"]
 	path = vim/pack/plugins/start/vim-ledger
 	url = git@github.com:ledger/vim-ledger.git
-[submodule "vim/pack/plugins/start/ultiships"]
-	path = vim/pack/plugins/start/ultiships
-	url = git@github.com:SirVer/ultisnips.git
 [submodule "vim/pack/plugins/start/vim-snippets"]
 	path = vim/pack/plugins/start/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
