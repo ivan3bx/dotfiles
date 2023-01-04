@@ -20,7 +20,7 @@ scrolling:
 font:
   normal:
     family: Source Code Pro for Powerline
-    style: Medium
+    style: Regular
   size: 13.0
   offset:
     x: 0
@@ -394,6 +394,7 @@ mouse:
 # a no-op if you do not wish to receive input characters for that binding.
 key_bindings:
   - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
+  - { key: Key2,   mods: Control, chars: "\x07\x6e" }
   #- { key: Key0,   mods: Command,         action: ResetFontSize    }
   #- { key: Equals, mods: Command,         action: IncreaseFontSize }
   #- { key: Add,    mods: Command,         action: IncreaseFontSize }
