@@ -3,7 +3,7 @@
 if command -v brew >/dev/null 2>&1; then
   FZF_PREFIX="$(brew --prefix)/opt/fzf"
 else
-  FZF_PREFIX="/usr/local/opt/fzf"
+  FZF_PREFIX="$HOME/.fzf"
 fi
 
 if [[ ! "$PATH" == *"$FZF_PREFIX/bin"* ]]; then
