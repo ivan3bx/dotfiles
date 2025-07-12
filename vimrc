@@ -1,14 +1,14 @@
 set nocompatible
 filetype off
 
-" vim-sneak labels subsequent matches
-let g:sneak#label = 1
-
 let g:UltiSnipsExpandTrigger=",,"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 filetype plugin indent on
+
+" vim-sneak labels subsequent matches (after plugins load)
+let g:sneak#label = 1
 let mapleader = ","    " leader to ','
 set sw=4               " default shift width
 set ts=4               " default tab stop
@@ -23,8 +23,6 @@ if !has('gui_running')
 	set t_Co=256         " force 256-color mode
 	set bg=dark
 	colorscheme iceberg  " default colorscheme
-	let g:alduin_Shout_Dragon_Aspect     = 1 " for alduin
-	let g:alduin_Shout_Animal_Allegiance = 1 " for alduin
 endif
 
 " status bar
@@ -47,30 +45,30 @@ set undodir=~/.vim/undodir
 let g:go_fmt_command = "goimports"
 
 " Ruby-specific configuration
-:autocmd Filetype ruby setlocal tabstop=2
-:autocmd Filetype ruby setlocal softtabstop=2
-:autocmd Filetype ruby setlocal shiftwidth=2
-:autocmd Filetype ruby setlocal expandtab
-:autocmd Filetype ruby setlocal commentstring=#\ %s
+autocmd Filetype ruby setlocal tabstop=2
+autocmd Filetype ruby setlocal softtabstop=2
+autocmd Filetype ruby setlocal shiftwidth=2
+autocmd Filetype ruby setlocal expandtab
+autocmd Filetype ruby setlocal commentstring=#\ %s
 
 " Commentary
 noremap \ :Commentary<CR>
 
 " NERDTree
-:noremap - :NERDTreeToggle<CR>
-:map <leader>r :NERDTreeFind<cr>
+noremap - :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<cr>
 
 " language linters
 let g:ale_enabled = 0
 let g:ale_sign_column_always = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 
-" fzf has a fzf.vim plugin file that needs to be in the rtp
+" fzf config
 if isdirectory('/usr/local/opt/fzf')
   set rtp+=/usr/local/opt/fzf
 elseif isdirectory('/opt/homebrew/opt/fzf')
   set rtp+=/opt/homebrew/opt/fzf
-elseif isdirectory('/home/ivan/.fzf/plugin')
+elseif isdirectory('/home/ivan/.fzf')
   set rtp+=/home/ivan/.fzf
 endif
 
@@ -98,7 +96,7 @@ if executable('fzf')
   " search term history
   command! QHist call fzf#vim#search_history({'right': '40'})
   nnoremap q/ :QHist<CR>
-end
+endif
 
 " vim-test
 nmap <silent> t<C-n> :TestNearest<CR>
