@@ -65,14 +65,15 @@ let g:ale_enabled = 0
 let g:ale_sign_column_always = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 
-" fzf config
+" fzf has a fzf.vim plugin file that needs to be in the rtp
 if isdirectory('/usr/local/opt/fzf')
   set rtp+=/usr/local/opt/fzf
 elseif isdirectory('/opt/homebrew/opt/fzf')
   set rtp+=/opt/homebrew/opt/fzf
-elseif isdirectory('/usr/share/fzf')
-  set rtp+=/usr/share/fzf
+elseif isdirectory('/home/ivan/.fzf/plugin')
+  set rtp+=/home/ivan/.fzf
 endif
+
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
 \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
