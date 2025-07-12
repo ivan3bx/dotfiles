@@ -68,8 +68,8 @@ if isdirectory('/usr/local/opt/fzf')
   set rtp+=/usr/local/opt/fzf
 elseif isdirectory('/opt/homebrew/opt/fzf')
   set rtp+=/opt/homebrew/opt/fzf
-elseif isdirectory('/home/ivan/.fzf')
-  set rtp+=/home/ivan/.fzf
+elseif isdirectory($HOME . '/.fzf')
+  execute 'set rtp+=' . $HOME . '/.fzf'
 endif
 
 command! -bang -nargs=* Rg
