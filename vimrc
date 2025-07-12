@@ -1,6 +1,9 @@
 set nocompatible
 filetype off
 
+" vim-sneak labels subsequent matches
+let g:sneak#label = 1
+
 let g:UltiSnipsExpandTrigger=",,"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"

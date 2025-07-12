@@ -58,3 +58,9 @@
 [submodule "vim/pack/plugins/start/vim-snippets"]
 	path = vim/pack/plugins/start/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "vim/pack/plugins/start/vimoutliner"]
+	path = vim/pack/plugins/start/vimoutliner
+	url = git@github.com:vimoutliner/vimoutliner.git
+[submodule "vim/pack/plugins/start/vim-sneak"]
+	path = vim/pack/plugins/start/vim-sneak
+	url = git@github.com:justinmk/vim-sneak.git
