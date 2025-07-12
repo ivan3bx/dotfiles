@@ -66,7 +66,13 @@ let g:ale_sign_column_always = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 
 " fzf config
-set rtp+=/usr/local/opt/fzf
+if isdirectory('/usr/local/opt/fzf')
+  set rtp+=/usr/local/opt/fzf
+elseif isdirectory('/opt/homebrew/opt/fzf')
+  set rtp+=/opt/homebrew/opt/fzf
+elseif isdirectory('/usr/share/fzf')
+  set rtp+=/usr/share/fzf
+endif
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
 \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
@@ -74,8 +80,8 @@ command! -bang -nargs=* Rg
 
 if executable('fzf')
   " search files and file history
-  nnoremap <silent> <C-t> :FZF -m<cr>
-  nnoremap <silent> <C-p> :History -m<cr>
+  nnoremap <silent> <C-t> :FZF<cr>
+  nnoremap <silent> <C-p> :History<cr>
 
   " search current word under cursor
   nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
