@@ -1,0 +1,46 @@
+# FAILED line - red and bold
+regexp=^FAILED.*
+colours=bold red
+-
+# AssertionError lines - red
+regexp=^AssertionError.*
+colours=red
+-
+regexp==+
+colours=cyan
+-
+# Traceback header - yellow
+regexp=^Traceback \(most recent call last\):$
+colours=yellow
+-
+# File lines in traceback - yellow
+regexp=^\s+File ".*", line \d+.*$
+colours=yellow
+-
+# Code lines in traceback (indented) - yellow
+regexp=^\s{4,}\S.*$
+colours=yellow
+-
+# Caret pointers in traceback - yellow
+regexp=^\s+\^+$
+colours=yellow
+-
+# Error type lines (like "ValueError:", "TypeError:", etc.) - red
+regexp=^\w+Error:.*$
+colours=red
+-
+# FAIL: test name header - red
+regexp=^FAIL:.*$
+colours=red
+-
+# Separator lines - light gray
+regexp=^[-=]+$
+colours=dark white
+-
+# OK/PASSED - green (in case tests pass)
+regexp=^OK.*$
+colours=green
+-
+# Default - everything else light gray
+regexp=.+
+colours=dark white

@@ -1,0 +1,56 @@
+# Django test status - passing tests
+regexp=.*ok.*
+colour=green
+-
+# Django test status - failing tests
+regexp=^.*FAIL.*
+colour=red
+-
+# Django test status - errors
+regexp=\.\.\. ERROR
+colour=red
+-
+# Django test status - skipped
+regexp=\.\.\. skipped
+colour=yellow
+-
+# Test summary - FAILED
+regexp=^FAILED .*
+colour=red
+-
+# Test summary - OK
+regexp=^OK$
+colour=green
+-
+# Test execution info
+regexp=^Ran \d+ tests? in .*
+colour=cyan
+-
+# Section headers (dashes and equals)
+regexp=^(=+|--+)$
+colour=blue
+-
+# File paths in tracebacks
+regexp=File ".*\.py"
+colour=cyan
+-
+# Line numbers in tracebacks
+regexp=, line \d+
+colour=yellow
+-
+# Exception types
+regexp=^\w+Error:
+colour=red
+-
+# Test database messages
+regexp=(Creating|Destroying) test database.*
+colour=magenta
+-
+# System check messages
+regexp=System check identified.*
+colour=cyan
+-
+# Found tests message
+regexp=Found \d+ test\(s\)\.
+colour=cyan
+-
